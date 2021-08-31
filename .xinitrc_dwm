@@ -34,7 +34,7 @@ fi
 nitrogen --restore &
 
 # Compositor
-compton --frame-opacity=1.0 --backend glx &
+picom &
 
 # Key bindings / keyboard layout
 xbindkeys &

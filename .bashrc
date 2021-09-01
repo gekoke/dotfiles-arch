@@ -63,6 +63,7 @@ rep(){
 }
 
 # Make Android Studio not break
+wmname LG3D &
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 export PATH="$PATH:$HOME/Builds/flutter/bin/:$HOME/.emacs.d/bin"
@@ -71,8 +72,6 @@ export ANDROID_SDK_ROOT=$ANDROID_HOME
 export FLUTTER_ROOT=$ANDROID_HOME
 export GIT_TERMINAL_PROMPT=1
 export VOSHOOTER_GITLAB="gK6hhBMNzVTYLtFqdLsH"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 eval "$(starship init bash)"
 

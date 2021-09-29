@@ -1,15 +1,11 @@
-nnoremap <SPACE> <Nop>
-let mapleader = " "
+""""""
+" ~/.config/nvim/init.vim
+"""""
 
-if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
-    echo "Downloading junegunn/vim-plug to manage plugins..."
-    silent !mkdir -p ~/.config/nvim/autoload/
-    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
-    autocmd VimEnter * PlugInstall
-endif
-
+""""""
+" Basic configuration
+""""""
 syntax on
-
 set clipboard+=unnamedplus
 set relativenumber
 set nohlsearch
@@ -32,30 +28,58 @@ set scrolloff=8
 set noshowmode
 set shortmess=I
 
+
+""""""
+" Plugins
+""""""
+" Download Plug (plugin manager) automatically
+if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
+    echo "Downloading junegunn/vim-plug to manage plugins..."
+    silent !mkdir -p ~/.config/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
+endif
+
 call plug#begin('~/.vim/plugged')
 
+" Language
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Git
 Plug 'tpope/vim-fugitive'
-Plug 'vim-utils/vim-man'
-Plug 'mbbill/undotree'
+Plug 'airblade/vim-gitgutter'
+
+" Fuzzy find
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Themes
 Plug 'morhetz/gruvbox', { 'as': 'gruvbox' }
 Plug 'joshdick/onedark.vim'
+Plug 'chriskempson/base16-vim'
+
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
+
+"""""""""""""
+" Theme
+"""""""""""""
+au ColorScheme * hi Normal ctermbg=none guibg=none     " Set background to transparent after colorscheme load
+au ColorScheme * hi SignColumn ctermbg=none guibg=none " Set gutter to transparent after colorscheme load
 color onedark
-hi Normal ctermbg=NONE guibg=NONE
 
-" Set hotkey to open init.vim
+
+"""""""""""""
+" Remaps and leader keys
+"""""""""""""
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
 map <leader>rc :e $MYVIMRC<cr>
-
-" Disable an annoying message
-nnoremap <C-c> <silent> <C-c>
-
-" fzf hotkeys
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
+
+" nnoremap <C-c> <silent> <C-c>  " Disables an annoying message maybe
 

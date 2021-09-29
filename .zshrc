@@ -19,8 +19,8 @@ set +H
 
 # Term colors.
 export TERM=xterm-256color
-alias ls='exa --color=auto'
-alias la="exa -a"
+alias ls='exa --color=auto --icons'
+alias la="exa -a --icons"
 
 # Personal aliases.
 alias v="nvim"

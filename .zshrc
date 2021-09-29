@@ -5,10 +5,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-plugins=(
-  fzf
-)
+# Plugins
+source /usr/share/zsh/share/antigen.zsh
+antigen use oh-my-zsh
 
+antigen bundle fzf
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
+
+# Load fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Enable vi-like input editing.
@@ -45,6 +51,7 @@ export ANDROID_HOME="/home/geko/Android/Sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export FLUTTER_ROOT=$ANDROID_HOME
 export GIT_TERMINAL_PROMPT=1
+export GCM_CREDENTIAL_STORE=gpg
 
 eval "$(starship init zsh)"
 neofetch --ascii="$(fortune -s | cowsay)"

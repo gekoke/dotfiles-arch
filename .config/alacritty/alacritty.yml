@@ -98,8 +98,8 @@ font:
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
-     x: -1
-     y: -1
+    x: -1
+    y: -1
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
   # increasing `y` moves the glyph upwards.
@@ -127,31 +127,32 @@ font:
 # Colors (Tomorrow Night Bright)
 background_opacity: 0.9
 colors:
-  # Default colors
+  name: Colorful Colors
+  author: ""
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
-
-  # Normal colors
+    background: "#202022"
+    foreground: "#ffffff"
+  cursor:
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
-
-  # Bright colors
+    black: "#151515"
+    red: "#ff8eaf"
+    green: "#a6e25f"
+    yellow: "#f8e578"
+    blue: "#a6e2f0"
+    magenta: "#e85b92"
+    cyan: "#5f868f"
+    white: "#d5f1f2"
   bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
+    black: "#696969"
+    red: "#ed4c7a"
+    green: "#a6e179"
+    yellow: "#ffdf6b"
+    blue: "#79d2ff"
+    magenta: "#bb5d79"
+    cyan: "#87a8af"
+    white: "#e2f1f6"
     magenta: '#c678dd'
     cyan: '#56b6c2'
     white: '#ffffff'

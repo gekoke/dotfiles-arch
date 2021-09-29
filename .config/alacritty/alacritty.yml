@@ -127,32 +127,81 @@ font:
 # Colors (Tomorrow Night Bright)
 background_opacity: 0.88
 colors:
+  # COLORSCHEME: one-dark.yml
+  # Default colors
   name: Colorful Colors
-  author: ""
+  author: ''
   primary:
-    background: "#2a2a2c"
-    foreground: "#ffffff"
+    background: '0x1e2127'
+    foreground: '0xabb2bf'
+
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not present.
+    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # is `false`, the normal foreground color will be used.
+    #dim_foreground: '0x9a9a9a'
+    bright_foreground: '0xe6efff'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor. If these are unset,
+  # the cursor color will be the inverse of the cell color.
+  #cursor:
+  #  text: '0x000000'
+  #  cursor: '0xffffff'
+
+  # Normal colors
   cursor:
-    text: "#000000"
-    cursor: "#ffffff"
+    text: '0x212121'
+    cursor: '0xcdcdcd'
+
+  # Normal colors
   normal:
-    black: "#151515"
-    red: "#ff8eaf"
-    green: "#a6e25f"
-    yellow: "#f8e578"
-    blue: "#a6e2f0"
-    magenta: "#e85b92"
-    cyan: "#5f868f"
-    white: "#d5f1f2"
+    black: '0x1e2127'
+    red: '0xe06c75'
+    green: '0x98c379'
+    yellow: '0xd19a66'
+    blue: '0x61afef'
+    magenta: '0xc678dd'
+    cyan: '0x56b6c2'
+    white: '0x828791'
+
+  # Bright colors
   bright:
-    black: "#696969"
-    red: "#ed4c7a"
-    green: "#a6e179"
-    yellow: "#ffdf6b"
-    blue: "#79d2ff"
-    magenta: "#bb5d79"
-    cyan: "#87a8af"
-    white: "#e2f1f6"
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#ffffff'
+    black: '0x5c6370'
+    red: '0xe06c75'
+    green: '0x98c379'
+    yellow: '0xd19a66'
+    blue: '0x61afef'
+    magenta: '0xc678dd'
+    cyan: '0x56b6c2'
+    white: '0xe6efff'
+
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
+  dim:
+    black: '0x1e2127'
+    red: '0xe06c75'
+    green: '0x98c379'
+    yellow: '0xd19a66'
+    blue: '0x61afef'
+    magenta: '0xc678dd'
+    cyan: '0x56b6c2'
+    white: '0x828791'
+
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #indexed_colors:
+  #  - { index: 16, color: '0x000000' }
+  indexed_colors:
+    - {index: 16, color: '0xfd971f'}
+    - {index: 17, color: '0xe8b882'}
+    - {index: 18, color: '0x303030'}
+    - {index: 19, color: '0x353535'}
+    - {index: 20, color: '0x707070'}
+    - {index: 21, color: '0xe5e5e5'}

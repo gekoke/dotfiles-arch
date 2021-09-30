@@ -1,1 +1,1 @@
-![Screenshot of dotfiles in action](dots.png)
+![Screenshot of dotfiles in action](.dots.png)

@@ -10,12 +10,10 @@ source /usr/share/zsh/share/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle fzf
+antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
-
-# Load fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Enable vi-like input editing.
 set -o vi
@@ -40,9 +38,6 @@ alias zs="source ~/.zshrc"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-# Fuzzy find
-export FZF_CTRL_T_COMMAND="find . 2> /dev/null"
-
 # Make Intellij not break
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -53,6 +48,10 @@ export FLUTTER_ROOT=$ANDROID_HOME
 export GIT_TERMINAL_PROMPT=1
 export GCM_CREDENTIAL_STORE=gpg
 
+# Fuzzy find
+export FZF_CTRL_T_COMMAND="find . 2> /dev/null"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 eval "$(starship init zsh)"
-neofetch --ascii="$(fortune -s | cowsay)"
+neofetch --ascii "$(fortune -s | cowsay)"
 

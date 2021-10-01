@@ -36,6 +36,14 @@ alias open="xdg-open"
 alias zc="nvim ~/.zshrc"
 alias zs="source ~/.zshrc"
 
+# Trash
+alias rm="echo 'Escape this alias if you are sure...'"
+alias dl="trash"
+
+# Clipboard
+alias cb="xclip -selection clipboard"
+alias cbo="xclip -o -selection clipboard"
+
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Make Intellij not break

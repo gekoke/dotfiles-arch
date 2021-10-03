@@ -35,6 +35,7 @@ alias gs="git status"
 alias open="xdg-open"
 alias zc="nvim ~/.zshrc"
 alias zs="source ~/.zshrc"
+alias myip="curl ifconfig.me"
 
 # Trash
 alias rm="echo 'Escape this alias if you are sure...'"

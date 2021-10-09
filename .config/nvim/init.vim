@@ -70,6 +70,7 @@ au ColorScheme * hi Normal ctermbg=none guibg=none     " Set background to trans
 au ColorScheme * hi SignColumn ctermbg=none guibg=none " Set gutter to transparent after colorscheme load
 colorscheme onedark
 
+
 """""""""""""
 " Remaps and leader keys
 """""""""""""
@@ -79,6 +80,7 @@ let mapleader = " "
 map <leader>rc :e $MYVIMRC<cr>
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
+nnoremap <silent> <leader>j dd2kpJ  " Inverse of J
 
 " nnoremap <C-c> <silent> <C-c>  " Disables an annoying message maybe
 

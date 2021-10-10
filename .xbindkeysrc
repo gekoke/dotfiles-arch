@@ -1,0 +1,33 @@
+# ~/.xbindkeysrc
+
+# Open browser
+"firefox"
+    Mod4 + Shift + w
+
+# Screenshot
+"flameshot gui"
+    Mod4 + Shift + s
+
+# Stop recording gif
+"pkill ffmpeg"
+    Mod4 + Shift + q
+
+# Open file manager
+"nautilus"
+    Mod4 + e
+
+# Reduce / increase volume
+"pactl set-sink-volume @DEFAULT_SINK@ +5%; pkill -RTMIN+10 dwmblocks"
+    Mod4 + u
+
+"pactl set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 dwmblocks"
+    Mod4 + y
+
+# Wake screen
+"xrandr --output HDMI-0 --mode 1920x1080 --rate 240"
+    Mod4 + Shift + 0
+
+# Launch power menu
+"./home/geko/.config/rofi/powermenu/powermenu.sh"
+    Mod4 + Shift + o
+

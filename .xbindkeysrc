@@ -28,6 +28,6 @@
     Mod4 + Shift + 0
 
 # Launch power menu
-"./home/geko/.config/rofi/powermenu/powermenu.sh"
+"sh /home/geko/.config/rofi/powermenu/powermenu.sh"
     Mod4 + Shift + o
 

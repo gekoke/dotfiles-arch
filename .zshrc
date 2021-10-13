@@ -50,6 +50,7 @@ alias open="xdg-open"
 alias zc="nvim ~/.zshrc"
 alias zs="source ~/.zshrc"
 alias myip="curl ifconfig.me"
+alias kjbs='kill -9 $(jobs -ps) 2> /dev/null'
 
 # Trash
 alias rm="echo 'Escape this alias if you are sure...'"

@@ -34,7 +34,7 @@ fi
 nitrogen --restore &
 
 # Compositor
-picom &
+picom --experimental-backends &
 
 # Key bindings / keyboard layout
 xbindkeys &

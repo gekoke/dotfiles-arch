@@ -66,6 +66,7 @@ rep(){
 wmname LG3D &
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+export JAVA_HOME="/usr/lib/jvm/java-16-amazon-corretto"
 export PATH="$PATH:$HOME/Builds/flutter/bin/:$HOME/.emacs.d/bin"
 export ANDROID_HOME="/home/geko/Android/Sdk"
 export ANDROID_SDK_ROOT=$ANDROID_HOME

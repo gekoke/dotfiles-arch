@@ -25,6 +25,7 @@ set -o vi  # Enable vi-like input editing.
 set +H  # Disable history expansion.
 
 export EDITOR="nvim"
+export JAVA_HOME="/usr/lib/jvm/java-16-amazon-corretto"
 export _JAVA_AWT_WM_NONREPARENTING=1  # Make Java apps not break
 export PATH="$PATH:$HOME/Builds/flutter/bin/:$HOME/.emacs.d/bin:$HOME/.local/bin"
 export ANDROID_HOME="/home/geko/Android/Sdk"
@@ -39,6 +40,7 @@ export PAGER="most"  # Set default program for man pages and such.
 ######
 # Aliases
 ######
+alias at="alacritty-themes"
 alias ls='exa --icons'
 alias la="exa -a --icons"
 alias v="nvim"
@@ -50,7 +52,11 @@ alias open="xdg-open"
 alias zc="nvim ~/.zshrc"
 alias zs="source ~/.zshrc"
 alias myip="curl ifconfig.me"
-alias kjbs='kill -9 $(jobs -ps) 2> /dev/null'
+alias kjbs='kill ${${(v)jobstates##*:*:}%=*}'
+alias x="grep"
+alias i="grep -i"
+alias keyfix="pacman -S archlinux-keyring --noconfirm"
+alias cal="ncal -M -b -A 1"
 
 # Trash
 alias rm="echo 'Escape this alias if you are sure...'"
@@ -62,6 +68,7 @@ alias cbo="xclip -o -selection clipboard"
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+function topdf () { soffice --headless --convert-to pdf "$1" }
 
 ######
 # Fuzzy find
@@ -74,5 +81,5 @@ export FZF_CTRL_T_COMMAND="find . 2> /dev/null"
 # On load / prompt
 ######
 eval "$(starship init zsh)"
-neofetch --ascii "$(fortune -s | cowsay)"
+echo "\n$(neofetch)\n$(fortune -s | cowsay)"
 

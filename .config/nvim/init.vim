@@ -42,6 +42,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Functionality
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 " Language
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

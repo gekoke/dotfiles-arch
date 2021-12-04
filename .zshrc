@@ -58,6 +58,7 @@ alias i="grep -i"
 alias keyfix="pacman -S archlinux-keyring --noconfirm"
 alias cal="ncal -M -b -A 1"
 alias p="realpath"
+alias c="find ~/.config -type f | fzf | xargs nvim"
 
 # Trash
 alias dl="trash"

@@ -44,7 +44,7 @@ alias at="alacritty-themes"
 alias ls='exa --icons'
 alias la="exa -a --icons"
 alias v="nvim"
-alias ra="ranger"
+alias ra=". ranger"
 alias cl="clear"
 alias spaceavail="sh ~/Scripts/diskspace.sh"
 alias gs="git status"
@@ -57,9 +57,9 @@ alias x="grep"
 alias i="grep -i"
 alias keyfix="pacman -S archlinux-keyring --noconfirm"
 alias cal="ncal -M -b -A 1"
+alias p="realpath"
 
 # Trash
-alias rm="echo 'Escape this alias if you are sure...'"
 alias dl="trash"
 
 # Clipboard

@@ -154,34 +154,32 @@ font:
 #draw_bold_text_with_bright_colors: false
 # Colors (Tomorrow Night Bright)
 colors:
-  # Default colors
+  name: VisiBone
+  author: ""
   primary:
-    background: '#282c34'
-    foreground: '#abb2bf'
-
-  # Normal colors
+    background: "#000000"
+    foreground: "#ffffff"
+  cursor:
+    text: "#000000"
+    cursor: "#ffffff"
   normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
-    black: '#282c34'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#abb2bf'
-
-  # Bright colors
+    black: "#666666"
+    red: "#cc6666"
+    green: "#66cc99"
+    yellow: "#cc9966"
+    blue: "#6699cc"
+    magenta: "#cc6699"
+    cyan: "#66cccc"
+    white: "#cccccc"
   bright:
-    black: '#5c6370'
-    red: '#e06c75'
-    green: '#98c379'
-    yellow: '#d19a66'
-    blue: '#61afef'
-    magenta: '#c678dd'
-    cyan: '#56b6c2'
-    white: '#ffffff'
+    black: "#999999"
+    red: "#ff9999"
+    green: "#99ffcc"
+    yellow: "#ffcc99"
+    blue: "#99ccff"
+    magenta: "#ff99cc"
+    cyan: "#99ffff"
+    white: "#ffffff"
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once

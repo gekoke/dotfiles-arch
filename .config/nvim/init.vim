@@ -71,7 +71,7 @@ call plug#end()
 """""""""""""
 au ColorScheme * hi Normal ctermbg=none guibg=none     " Set background to transparent after colorscheme load
 au ColorScheme * hi SignColumn ctermbg=none guibg=none " Set gutter to transparent after colorscheme load
-colorscheme onedark
+colorscheme gruvbox
 
 
 """""""""""""

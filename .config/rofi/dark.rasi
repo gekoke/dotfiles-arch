@@ -1,0 +1,8 @@
+* {
+  al:           #00000000;
+  bg:       #ffffff22;
+  fg:       #ffffff;
+  se:               #000000;
+  ac:              #000000;
+  accent-light: #00ff00;
+}

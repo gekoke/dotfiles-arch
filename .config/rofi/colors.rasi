@@ -1,9 +1,10 @@
-/* colors */
+/*
+ * Change the colorscheme for every menu simply by editing this file...
+ *
+ * Available Color Schemes
+ *
+ * bluish    berry    nordic    nightly    gotham    mask    faded    cocoa
+ *
+ */
 
-* {
-  al:  #00000000;
-  bg:  #68889Daa;
-  se:  #ffffffaa;
-  fg:  #505B63aa;
-  ac:  #68889Dff;
-}
+@import "dark.rasi"

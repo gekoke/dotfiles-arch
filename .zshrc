@@ -25,7 +25,6 @@ set -o vi  # Enable vi-like input editing.
 set +H  # Disable history expansion.
 
 export EDITOR="nvim"
-export JAVA_HOME="/usr/lib/jvm/java-16-amazon-corretto"
 export _JAVA_AWT_WM_NONREPARENTING=1  # Make Java apps not break
 export PATH="$PATH:$HOME/Builds/flutter/bin/:$HOME/.emacs.d/bin:$HOME/.local/bin"
 export ANDROID_HOME="/home/geko/Android/Sdk"

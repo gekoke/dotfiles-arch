@@ -1,7 +1,7 @@
 # ~/.xbindkeysrc
 
 # Open browser
-"qutebrowser"
+"firefox"
     Mod4 + Shift + w
 
 # Screenshot
@@ -17,10 +17,10 @@
     Mod4 + e
 
 # Reduce / increase volume
-"pactl set-sink-volume @DEFAULT_SINK@ +5%; pkill -RTMIN+10 dwmblocks"
+"pactl set-sink-volume @DEFAULT_SINK@ +1%; pkill -RTMIN+10 dwmblocks"
     Mod4 + u
 
-"pactl set-sink-volume @DEFAULT_SINK@ -5%; pkill -RTMIN+10 dwmblocks"
+"pactl set-sink-volume @DEFAULT_SINK@ -1%; pkill -RTMIN+10 dwmblocks"
     Mod4 + y
 
 # Wake screen

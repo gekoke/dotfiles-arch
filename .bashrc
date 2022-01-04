@@ -1,4 +1,4 @@
-
+#
 # ~/.bashrc
 #
 
@@ -74,5 +74,4 @@ export FLUTTER_ROOT=$ANDROID_HOME
 export GIT_TERMINAL_PROMPT=1
 export VOSHOOTER_GITLAB="gK6hhBMNzVTYLtFqdLsH"
 
-eval "$(starship init bash)"
 

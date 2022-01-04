@@ -39,6 +39,11 @@ export PAGER="most"  # Set default program for man pages and such.
 ######
 # Aliases
 ######
+alias m="mount"
+alias um="umount"
+alias ctl="systemctl"
+alias lg="lazygit"
+alias lzd="sudo lazydocker"
 alias at="alacritty-themes"
 alias ls='exa --icons'
 alias la="exa -a --icons"
@@ -46,7 +51,6 @@ alias v="nvim"
 alias ra=". ranger"
 alias cl="clear"
 alias spaceavail="sh ~/Scripts/diskspace.sh"
-alias gs="git status"
 alias open="xdg-open"
 alias zc="nvim ~/.zshrc"
 alias zs="source ~/.zshrc"
@@ -61,12 +65,16 @@ alias c="find ~/.config -type f | fzf | xargs nvim"
 
 # Trash
 alias dl="trash"
+alias lsdl="trash-list"
 
 # Clipboard
 alias cb="xclip -selection clipboard"
 alias cbo="xclip -o -selection clipboard"
 
+# Git
+alias gs="git status"
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dts='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 function topdf () { soffice --headless --convert-to pdf "$1" }
 

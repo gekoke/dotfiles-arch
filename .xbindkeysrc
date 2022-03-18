@@ -1,16 +1,12 @@
 # ~/.xbindkeysrc
 
 # Open browser
-"firefox"
+"brave"
     Mod4 + Shift + w
 
 # Screenshot
 "flameshot gui"
     Mod4 + Shift + s
-
-# Stop recording gif
-"pkill ffmpeg"
-    Mod4 + Shift + q
 
 # Open file manager
 "nautilus"
@@ -28,6 +24,6 @@
     Mod4 + Shift + 0
 
 # Launch power menu
-"sh /home/geko/.config/rofi/powermenu/powermenu.sh"
+"bash /home/geko/.config/rofi/powermenu/powermenu.sh"
     Mod4 + Shift + o
 

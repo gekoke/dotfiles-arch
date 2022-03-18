@@ -38,7 +38,7 @@ picom --experimental-backends &
 
 # Key bindings / keyboard layout
 xbindkeys &
-setxkbmap us -variant geko &
+setxkbmap gk &
 
 # Disable monitor suspend when inactive
 xset dpms 0 0 0 &

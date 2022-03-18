@@ -74,5 +74,5 @@ eval $(gnome-keyring-daemon --start) &
 export SSH_AUTH_SOCK &
 
 # Execute DWM
-exec dwm
+while type dwm >/dev/null ; do dwm && continue || break ; done
 

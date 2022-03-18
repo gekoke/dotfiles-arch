@@ -33,14 +33,6 @@ set signcolumn=yes
 """"""
 " Plugins
 """"""
-" Download Plug (plugin manager) automatically
-if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
-    echo "Downloading junegunn/vim-plug to manage plugins..."
-    silent !mkdir -p ~/.config/nvim/autoload/
-    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
-    autocmd VimEnter * PlugInstall
-endif
-
 call plug#begin('~/.vim/plugged')
 
 " Functionality
@@ -52,6 +44,7 @@ Plug 'plasticboy/vim-markdown'
 
 " Language
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'https://github.com/gekoke/xonsh-vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -65,18 +58,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox', { 'as': 'gruvbox' }
 Plug 'joshdick/onedark.vim'
 Plug 'romgrk/doom-one.vim'
-
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
-
 
 """""""""""""
 " Theme
 """""""""""""
 au ColorScheme * hi Normal ctermbg=none guibg=none     " Set background to transparent after colorscheme load
 au ColorScheme * hi SignColumn ctermbg=none guibg=none " Set gutter to transparent after colorscheme load
-colorscheme onedark
+colorscheme gruvbox
 
 
 """""""""""""
@@ -89,6 +80,4 @@ map <leader>rc :e $MYVIMRC<cr>
 nnoremap <silent> <leader>f :FZF<cr>
 nnoremap <silent> <leader>F :FZF ~<cr>
 nnoremap <silent> <leader>j dd2kpJ  " Inverse of J
-
-" nnoremap <C-c> <silent> <C-c>  " Disables an annoying message maybe
 

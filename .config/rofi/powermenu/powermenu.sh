@@ -36,7 +36,7 @@ rofi_command="rofi -theme $dir/$theme"
 # Options
 shutdown=""
 reboot=""
-#lock=""
+lock=""
 suspend=""
 #logout=""
 
@@ -55,9 +55,9 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$shutdown\n$reboot\n$suspend"
+options="$lock\n$shutdown\n$reboot\n$suspend"
 
-chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
         systemctl poweroff
@@ -67,7 +67,12 @@ case $chosen in
         ;;
     $suspend)
         mpc -q pause
-        amixer set Master mute
         systemctl suspend
         ;;
+    $lock)
+        mpc -q pause
+        killall dwm
+        pkill -KILL -u $USER
+        ;;
 esac
+

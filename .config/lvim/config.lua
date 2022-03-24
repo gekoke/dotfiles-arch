@@ -20,7 +20,9 @@ lvim.plugins = {
     -- Idris
     "idris-hackers/idris-vim",
     -- Xonsh
-    "abhishekmukherg/xonsh-vim"
+    "abhishekmukherg/xonsh-vim",
+    -- fish
+    "khaveesh/vim-fish-syntax"
 }
 
 -- Layout
@@ -53,8 +55,4 @@ end
 
 -- Themes / Colors
 lvim.transparent_window = true
-vim.cmd("highlight GitSignsAdd guibg=NONE")
-vim.cmd("highlight GitSignsChange guibg=NONE")
-vim.cmd("highlight GitSignsDelete guibg=NONE")
-
 lvim.colorscheme = "everforest"

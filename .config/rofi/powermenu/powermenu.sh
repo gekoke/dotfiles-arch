@@ -38,7 +38,7 @@ shutdown=""
 reboot=""
 lock=""
 suspend=""
-#logout=""
+logout=""
 
 # Confirmation
 confirm_exit() {
@@ -55,7 +55,7 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$lock\n$shutdown\n$reboot\n$suspend"
+options="$lock\n$logout\n$suspend\n$reboot\n$shutdown"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -69,10 +69,13 @@ case $chosen in
         mpc -q pause
         systemctl suspend
         ;;
-    $lock)
+    $logout)
         mpc -q pause
         killall dwm
         pkill -KILL -u $USER
+        ;;
+    $lock)
+        xsecurelock
         ;;
 esac
 

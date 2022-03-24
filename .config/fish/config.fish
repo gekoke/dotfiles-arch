@@ -11,9 +11,9 @@ function configure_default_programs
 end
 
 function configure_environment
-  set -x _JAVA_AWT_WM_NONREPARENTING 1
-  set -x XSECURELOCK_NO_COMPOSITE 1
-  set -x GCM_CREDENTIAL_STORE gpg
+  set -gx JAVA_AWT_WM_NONREPARENTING 1
+  set -gx SECURELOCK_NO_COMPOSITE 1
+  set -gx GCM_CREDENTIAL_STORE "gpg"
 end
 
 function bind_aliases

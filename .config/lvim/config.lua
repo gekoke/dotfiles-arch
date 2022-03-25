@@ -1,6 +1,11 @@
 -- Keybind
 lvim.leader = "space"
 
+-- Functionality
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+
 -- Log
 lvim.log.level = "warn"
 

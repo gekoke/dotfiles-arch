@@ -16,6 +16,16 @@ function configure_environment
   set -gx GCM_CREDENTIAL_STORE "gpg"
 end
 
+function configure_fish
+  set -U fish_prompt_pwd_dir_length 0  # Don't shorten pwd in prompt
+end
+
+function fish_greeting
+  neofetch
+  printf "\n"
+  set_color green; fortune -a | boxes -d java-cmt
+end
+
 function bind_aliases
   alias v "lvim"
   alias c "find ~/.config -type f | fzf | xargs $EDITOR"
@@ -37,14 +47,10 @@ function bind_aliases
   alias cbo "xclip -o -selection clipboard"
 end
 
-function fish_greeting
-  neofetch
-  printf "\n"
-  set_color green; fortune -a | boxes -d java-cmt
-end
 
 configure_path
 configure_default_programs
 configure_environment
+configure_fish
 bind_aliases
 

@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/qube/.config/awesome'
+let g:netrw_dirhist_6='/home/qube/Documents/BlackmagicDesign'
+let g:netrw_dirhist_5='/home/qube/Documents'
+let g:netrw_dirhist_4='/home/qube/.local/share/dolphin-emu/Load/Textures/RMCK01'
+let g:netrw_dirhist_3='/home/qube/.local/share/dolphin-emu/Load/Textures'
+let g:netrw_dirhist_2='/home/qube/.local/share/dolphin-emu/Load'
+let g:netrw_dirhist_1='/usr/share/icons'

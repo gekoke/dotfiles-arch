@@ -49,8 +49,8 @@ xset s off &
 # xrandr --output HDMI-0 --mode 1920x1080 --rate 240 &
 
 # Status bar
-exec dwmblocks &
-~/scripts/ping-volume-bar-on-startup.sh &
+# exec dwmblocks &
+# ~/scripts/ping-volume-bar-on-startup.sh &
 
 # Set digital vibrance
 nvidia-settings --assign="DigitalVibrance=1023" &

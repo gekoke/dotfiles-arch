@@ -58,7 +58,10 @@ nvidia-settings --assign="DigitalVibrance=1023" &
 # Hide mouse cursor
 unclutter &
 
-# Notifications
+# Notification daemon
+ntfd &
+
+# Notification display client
 dunst &
 
 # Scrolling speed manager
@@ -73,6 +76,6 @@ wmname LG3D &
 eval $(gnome-keyring-daemon --start) &
 export SSH_AUTH_SOCK &
 
-# Execute DWM
-while type dwm >/dev/null ; do dwm && continue || break ; done
+#while type dwm >/dev/null ; do dwm && continue || break ; done
+exec leftwm > ~/.leftwm.log 2>&1
 

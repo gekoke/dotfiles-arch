@@ -14,20 +14,21 @@ lvim.format_on_save = true
 
 -- Plugins
 lvim.plugins = {
-  -- Copilot
-  "github/copilot.vim",
-
-  -- Themes
+    -- Copilot
+    "github/copilot.vim",
+    -- Themes
     "sainnhe/everforest",
-  -- Language
-    -- Python
-    "petobens/poet-v",
-    -- Idris
-    "idris-hackers/idris-vim",
-    -- Xonsh
-    "abhishekmukherg/xonsh-vim",
-    -- fish
-    "khaveesh/vim-fish-syntax"
+    -- Markdown
+    "iamcco/markdown-preview.nvim",
+    -- Language
+        -- Python
+        "petobens/poet-v",
+        -- Idris
+        "idris-hackers/idris-vim",
+        -- Xonsh
+        "abhishekmukherg/xonsh-vim",
+        -- fish
+        "khaveesh/vim-fish-syntax"
 }
 
 -- Layout

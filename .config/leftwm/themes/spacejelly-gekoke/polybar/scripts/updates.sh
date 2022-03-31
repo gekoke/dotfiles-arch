@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-echo $(yay -Pn)
+echo $({ checkupdates & yay -Qum; } | wc -l)
 

@@ -27,11 +27,16 @@
 "bash /home/geko/.config/rofi/powermenu/powermenu.sh"
     Mod4 + Shift + o
 
-Toggle polybar
+# Toggle polybar
 "polybar-msg cmd toggle"
     Mod4 + b
 
-Toggle monocle mode
+# Toggle monocle mode
 "python3 /home/geko/Scripts/togglemonocle.py"
     Mod4 + comma
+
+
+# Open ncpamixer
+"$TERM -e ncpamixer"
+    Mod4 + o
 

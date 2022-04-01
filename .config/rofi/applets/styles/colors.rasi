@@ -20,14 +20,3 @@
  */
 
 @import "dark.rasi"
-
-/* colors */
-
-* {
-  al:  #00000000;
-  bg:  #68889Daa;
-  se:  #ffffffaa;
-  fg:  #505B63aa;
-  ac:  #68889Dff;
-}
-

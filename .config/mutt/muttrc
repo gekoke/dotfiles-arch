@@ -1,0 +1,17 @@
+set folder = "imaps://mailbox@lazycantina.xyz@imap.fastmail.com:993"
+set smtp_url = "smtp://mailbox@lazycantina.xyz@smtp.fastmail.com:587"
+set imap_pass = `cat ~/.secrets/mail_pass`
+set ssl_starttls = "yes"
+
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+set from = "mailbox@lazycantina.xyz"
+set realname = "Anonymous Person"
+
+mailboxes =INBOX =Sent =Trash =Drafts =Archive =Spam
+
+macro index A ":set confirmappend=no delete=yes\n<tag-prefix><save-message>=archive\n<sync-mailbox>:set confirmappend=yes delete=ask-yes\n"
+

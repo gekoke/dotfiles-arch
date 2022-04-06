@@ -1,7 +1,7 @@
 # ~/.xbindkeysrc
 
 # Open browser
-"brave"
+"brave-nightly"
     Mod4 + Shift + w
 
 # Screenshot
@@ -34,7 +34,6 @@
 # Toggle monocle mode
 "python3 /home/geko/Scripts/togglemonocle.py"
     Mod4 + comma
-
 
 # Open ncpamixer
 "$TERM -e ncpamixer"

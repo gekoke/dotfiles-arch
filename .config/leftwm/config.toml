@@ -4,18 +4,18 @@ workspaces = []
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 layouts = [
-  "MainAndVertStack",
-  # "MainAndHorizontalStack",
-  # "MainAndDeck",
-  # "GridHorizontal",
-  # "EvenHorizontal",
-  # "EvenVertical",
-  # "Fibonacci",
-  # "CenterMain",
-  # "CenterMainBalanced",
-  "Monocle",
-  # "RightWiderLeftStack",
-  # "LeftWiderRightStack",
+    "MainAndVertStack",
+    # "MainAndHorizontalStack",
+    # "MainAndDeck",
+    # "GridHorizontal",
+    # "EvenHorizontal",
+    # "EvenVertical",
+    # "Fibonacci",
+    # "CenterMain",
+    # "CenterMainBalanced",
+    "Monocle",
+    # "RightWiderLeftStack",
+    # "LeftWiderRightStack",
 ]
 layout_mode = "Tag"
 scratchpad = []
@@ -30,7 +30,7 @@ key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "dmenu_run"
+value = "bash ~/.config/rofi/launchers/colorful/launcher.sh"
 modifier = ["modkey"]
 key = "p"
 

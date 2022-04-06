@@ -1,3 +1,4 @@
-function m --wraps=neomutt --description 'alias m neomutt'
-  neomutt $argv; 
+function m
+    mbsync -a > /dev/null &
+    neomutt $argv; 
 end

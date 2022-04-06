@@ -16,3 +16,5 @@ alias lg "lazygit"
 alias lzd "sudo lazydocker"
 alias cb "xclip -selection clipboard"
 alias cbo "xclip -o -selection clipboard"
+alias p "notes new"
+alias pp nopen

@@ -1,1 +1,2 @@
 Starting warpd: 1.1.0-beta
+ERROR: Failed to grab w (ensure another application hasn't mapped it)

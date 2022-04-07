@@ -1,8 +1,8 @@
 hint_activation_key:M-q
-grid_activation_key:A-M-g
+hint_oneshot_key:M-w
 activation_key:M-a
+grid_activation_key:A-M-g
 
-hint_oneshot_key:A-M-l
 
 repeat_interval:20
 

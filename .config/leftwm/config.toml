@@ -76,13 +76,13 @@ key = "l"
 
 [[keybind]]
 command = "MoveToLastWorkspace"
-modifier = ["modkey", "Shift"]
-key = "w"
+modifier = ["alt", "Shift"]
+key = "Tab"
 
 [[keybind]]
 command = "SwapTags"
-modifier = ["modkey"]
-key = "w"
+modifier = ["Alt"]
+key = "Tab"
 
 [[keybind]]
 command = "MoveWindowUp"

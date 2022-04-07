@@ -67,6 +67,9 @@ dunst &
 # Scrolling speed manager
 imwheel &
 
+# Eliminate mouse
+warpd &
+
 # Make Android Studio not break
 # Also helps with Intellij (idea-ce) apparently
 export _JAVA_AWT_WM_NONREPARENTING=1 &

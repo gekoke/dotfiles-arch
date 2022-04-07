@@ -39,3 +39,6 @@
 "$TERM -e ncpamixer"
     Mod4 + o
 
+# Emoji
+"/usr/bin/rofimoji"
+    Mod4 + Shift +  e

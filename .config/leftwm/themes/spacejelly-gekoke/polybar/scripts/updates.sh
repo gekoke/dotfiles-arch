@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-echo $({ checkupdates & yay -Qum; } | wc -l)
+echo $({ checkupdates & paru -Qum; } | wc -l)
 

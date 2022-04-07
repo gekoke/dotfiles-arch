@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR AUR_HELPER:paru
 SETUVAR --export BROWSER:brave
 SETUVAR --export EDITOR:lvim
 SETUVAR --export SUDO_EDITOR:lvim

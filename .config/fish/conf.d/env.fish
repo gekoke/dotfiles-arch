@@ -1,13 +1,15 @@
 function _configure_path
     set -gx PATH $PATH $HOME/.local/bin/
     set -gx PATH $PATH $HOME/.jbang/bin/
+    set -gx PATH $PATH $HOME/.emacs.d/bin
 end
 
 function _configure_default_programs
-    set -Ux EDITOR "lvim"
-    set -Ux VISUAL "lvim"
-    set -Ux SUDO_EDITOR "lvim"
-    set -Ux BROWSER "brave"
+    set -U EDITOR "lvim"
+    set -U VISUAL "lvim"
+    set -U SUDO_EDITOR "lvim"
+    set -U BROWSER "brave"
+    set -U AUR_HELPER "paru"
 end
 
 function _configure_configurations

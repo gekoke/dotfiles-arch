@@ -20,26 +20,31 @@ lvim.plugins = {
     "github/copilot.vim",
 
     -- Themes
+    "flazz/vim-colorschemes",
+    "embark-theme/vim",
     "sainnhe/everforest",
+    "sainnhe/sonokai",
     "gekoke/inkstained-vim",
     "drewtempelmeyer/palenight.vim",
     "morhetz/gruvbox",
+    "felixhummel/setcolors.vim",
 
     -- Functionality
-    "Pocco81/TrueZen.nvim",
     "tpope/vim-surround",
 
     -- Language
+    -- C
+    "jackguo380/vim-lsp-cxx-highlight",
+    -- fish
+    "khaveesh/vim-fish-syntax",
+    -- Idris
+    "edwinb/idris2-vim",
     -- Markdown
     "iamcco/markdown-preview.nvim",
     -- Python
     "petobens/poet-v",
-    -- Idris
-    "edwinb/idris2-vim",
     -- Xonsh
     "abhishekmukherg/xonsh-vim",
-    -- fish
-    "khaveesh/vim-fish-syntax"
 }
 
 lvim.builtin.project.manual_mode = true
@@ -74,5 +79,5 @@ end
 
 -- Themes / Colors
 lvim.transparent_window = false
-lvim.colorscheme = "gruvbox"
+lvim.colorscheme = "everforest"
 

@@ -10,6 +10,7 @@ c.colors.statusbar.insert.bg = 'darkgreen'
 # Bindings for insert mode
 config.bind('<Escape>', 'mode-leave', mode='insert')
 config.bind('<Ctrl-C>', 'mode-leave', mode='insert')
+config.bind('<Ctrl-V>', 'mode-leave', mode='passthrough')
 config.bind('<Ctrl-O>', 'back', mode='normal')
 config.bind('<Ctrl-I>', 'forward', mode='normal')
 config.bind('<Ctrl-Shift-L>', ':spawn --userscript qute-bitwarden --auto-lock=36000', mode='insert')

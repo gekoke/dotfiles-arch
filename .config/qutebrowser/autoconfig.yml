@@ -9,18 +9,21 @@ settings:
   bindings.commands:
     global:
       insert:
+        <Ctrl+Shift+l>: :spawn --userscript qute-bitwarden --auto-lock=36000
         <Ctrl+c>: mode-leave
         <Escape>: mode-leave
       normal:
         ',m': spawn mpv {url}
         <Ctrl+i>: forward
         <Ctrl+o>: back
+        <Ctrl+v>: mode-enter passthrough
         ctrl-i: forward
         ctrl-o: back
         h: scroll-px -150 0
         j: scroll-px 0 150
         k: scroll-px 0 -150
         l: scroll-px 150 0
+        mode-leave: ctrl-v
       passthrough:
         <Ctrl+Alt+z>: mode-leave
         <Shift+Escape>: null
@@ -50,19 +53,43 @@ settings:
     '*://*.www.wolframalpha.com/*': true
     '*://192.168.1.1/*': true
     '*://adventofcode.com/*': true
+    '*://app.element.io/*': true
     '*://github.com/*': true
     '*://gitlab.com/*': true
+    '*://lily.kazv.moe/*': true
     '*://localhost/*': true
+    '*://monkeytype.com/*': true
     '*://pi.hole/*': true
     '*://www.facebook.com/*': true
     '*://www.instagram.com/*': true
     '*://www.pornhub.com/*': true
     '*://www.startpage.com/*': true
+    '*://yewtu.be/*': true
     global: true
     https://searx.space/: true
   content.notifications.enabled:
     https://www.messenger.com: false
     https://www.reddit.com: false
     https://www.youtube.com: false
+  fileselect.folder.command:
+    global:
+    - alacritty
+    - -e
+    - ranger
+    - --choosedir={}
+  fileselect.handler:
+    global: external
+  fileselect.multiple_files.command:
+    global:
+    - alacritty
+    - -e
+    - ranger
+    - --choosefiles={}
+  fileselect.single_file.command:
+    global:
+    - alacritty
+    - -e
+    - ranger
+    - --choosefile={}
   tabs.background:
     global: true

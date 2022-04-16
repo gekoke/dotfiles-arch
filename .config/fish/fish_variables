@@ -3,6 +3,21 @@
 SETUVAR AUR_HELPER:paru
 SETUVAR --export BROWSER:brave
 SETUVAR --export EDITOR:lvim
+SETUVAR --export LESS_TERMCAP_ZN:\x1d
+SETUVAR --export LESS_TERMCAP_ZO:\x1d
+SETUVAR --export LESS_TERMCAP_ZV:\x1d
+SETUVAR --export LESS_TERMCAP_ZW:\x1d
+SETUVAR --export LESS_TERMCAP_mb:\x1b\x5b1m\x1b\x5b32m
+SETUVAR --export LESS_TERMCAP_md:\x1b\x5b1m\x1b\x5b36m
+SETUVAR --export LESS_TERMCAP_me:\x1b\x28B\x1b\x5bm
+SETUVAR --export LESS_TERMCAP_mh:\x1b\x5b2m
+SETUVAR --export LESS_TERMCAP_mr:\x1b\x5b7m
+SETUVAR --export LESS_TERMCAP_se:\x1b\x5b27m\x1b\x28B\x1b\x5bm
+SETUVAR --export LESS_TERMCAP_so:\x1b\x5b1m\x1b\x5b33m\x1b\x5b44m
+SETUVAR --export LESS_TERMCAP_ue:\x1b\x5b24m\x1b\x28B\x1b\x5bm
+SETUVAR --export LESS_TERMCAP_us:\x1b\x5b4m\x1b\x5b1m\x1b\x5b37m
+SETUVAR --export MANPAGER:less\x20\x2dr
+SETUVAR --export PAGER:less\x20\x2dr
 SETUVAR --export SUDO_EDITOR:lvim
 SETUVAR --export VISUAL:lvim
 SETUVAR __fish_initialized:3400

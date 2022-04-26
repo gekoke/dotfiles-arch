@@ -25,10 +25,10 @@ c.completion.show = "always"
 
 
 # Set default search engine
-c.url.searchengines = { "DEFAULT": "https://searx.tiekoetter.com/search?q={}" }
+c.url.searchengines = { "DEFAULT": "https://search.brave.com/search?q={}" }
 
 # Set home page
-c.url.default_page = "https://searx.tiekoetter.com/"
+c.url.default_page = "https://search.brave.com/"
 
 # Whether quitting the application requires a confirmation.
 # Valid values:

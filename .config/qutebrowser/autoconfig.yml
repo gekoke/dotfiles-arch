@@ -13,10 +13,12 @@ settings:
         <Ctrl+c>: mode-leave
         <Escape>: mode-leave
       normal:
+        $d: tab-only --prev
         ',m': spawn mpv {url}
         <Ctrl+i>: forward
         <Ctrl+o>: back
         <Ctrl+v>: mode-enter passthrough
+        ^d: tab-only --next
         ctrl-i: forward
         ctrl-o: back
         h: scroll-px -150 0
@@ -26,11 +28,12 @@ settings:
         mode-leave: ctrl-v
       passthrough:
         <Ctrl+Alt+z>: mode-leave
+        <Ctrl+v>: mode-leave
         <Shift+Escape>: null
   colors.webpage.preferred_color_scheme:
     global: dark
   content.autoplay:
-    global: false
+    global: true
   content.cookies.accept:
     '*://*.login.microsoftonline.com/*': no-3rdparty
     '*://*.moodle-test.taltech.ee/*': no-3rdparty
@@ -39,6 +42,10 @@ settings:
     '*://*.www.whatsmybrowser.org/*': all
     '*://*.www.youtube.com/*': all
     '*://adventofcode.com/*': no-3rdparty
+    '*://maurus.ttu.ee/*': no-3rdparty
+    '*://monkeytype.com/*': no-3rdparty
+    '*://search.brave.com/*': never
+    '*://searx.be/*': no-3rdparty
     '*://www.facebook.com/*': no-3rdparty
     '*://www.instagram.com/*': no-3rdparty
     '*://www.youtube.com/*': all
@@ -54,15 +61,27 @@ settings:
     '*://192.168.1.1/*': true
     '*://adventofcode.com/*': true
     '*://app.element.io/*': true
+    '*://cumtown.org/*': true
     '*://github.com/*': true
     '*://gitlab.com/*': true
+    '*://gitlab.cs.ttu.ee/*': true
+    '*://imgur.com/*': true
     '*://lily.kazv.moe/*': true
+    '*://livettu-my.sharepoint.com/*': true
     '*://localhost/*': true
+    '*://maurus.ttu.ee/*': true
     '*://monkeytype.com/*': true
+    '*://odysee.com/*': true
+    '*://old.reddit.com/*': true
     '*://pi.hole/*': true
+    '*://searx.be/*': true
+    '*://tinder.com/*': true
+    '*://tube.cadence.moe/*': true
     '*://www.facebook.com/*': true
+    '*://www.fastmail.com/*': true
     '*://www.instagram.com/*': true
     '*://www.pornhub.com/*': true
+    '*://www.reddit.com/*': true
     '*://www.startpage.com/*': true
     '*://yewtu.be/*': true
     global: true
@@ -71,6 +90,8 @@ settings:
     https://www.messenger.com: false
     https://www.reddit.com: false
     https://www.youtube.com: false
+  content.pdfjs:
+    global: true
   fileselect.folder.command:
     global:
     - alacritty
@@ -91,5 +112,7 @@ settings:
     - -e
     - ranger
     - --choosefile={}
+  scrolling.smooth:
+    global: true
   tabs.background:
     global: true

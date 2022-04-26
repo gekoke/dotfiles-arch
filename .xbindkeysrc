@@ -1,7 +1,7 @@
 # ~/.xbindkeysrc
 
 # Open browser
-"brave-nightly"
+"qutebrowser"
     Mod4 + Shift + w
 
 # Screenshot
@@ -37,7 +37,7 @@
 
 # Open ncpamixer
 "$TERM -e ncpamixer"
-    Mod4 + o
+    Mod4 + i
 
 # Emoji
 "/usr/bin/rofimoji"

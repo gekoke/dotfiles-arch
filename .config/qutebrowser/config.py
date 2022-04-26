@@ -15,6 +15,7 @@ config.bind('<Ctrl-O>', 'back', mode='normal')
 config.bind('<Ctrl-I>', 'forward', mode='normal')
 config.bind('<Ctrl-Shift-L>', ':spawn --userscript qute-bitwarden --auto-lock=36000', mode='insert')
 
+# c.hints.chars = "arstneiovm"
 
 # When to show the autocompletion window.
 # Valid values:
@@ -61,16 +62,4 @@ c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack
 c.content.blocking.method = 'both'
 
 c.content.javascript.enabled = False
-config.set('content.javascript.enabled', True, '*://www.youtube.com/*')
-config.set('content.javascript.enabled', True, '*://accounts.google.com/*')
-config.set('content.javascript.enabled', True, '*://www.startpage.com/*')
-config.set('content.javascript.enabled', True, '*://www.messenger.com/*')
-config.set('content.javascript.enabled', True, '*://login.microsoftonline.com/*')
-config.set('content.javascript.enabled', True, '*://moodle.taltech.ee/*')
-config.set('content.cookies.accept', "no-3rdparty", '*://www.youtube.com/*')
-config.set('content.cookies.accept', "no-3rdparty", '*://login.microsoftonline.com/*')
-config.set('content.cookies.accept', "no-3rdparty", '*://www.messenger.com/*')
-config.set('content.cookies.accept', "no-3rdparty", '*://accounts.google.com/*')
-config.set('content.cookies.accept', "no-3rdparty", '*://www.startpage.com/*')
-config.set('content.cookies.accept', "no-3rdparty", '*://moodle.taltech.ee/*')
 

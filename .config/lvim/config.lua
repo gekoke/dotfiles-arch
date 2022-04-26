@@ -1,52 +1,10 @@
 -- Keybind
 lvim.leader = "space"
-vim.api.nvim_set_keymap("n", "<Leader><Leader>d", ":Copilot disable <CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader><Leader>c", ":Copilot enable <CR>", { noremap = true, silent = true })
 
 -- Functionality
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-
--- Log
-lvim.log.level = "warn"
-
--- Format
-lvim.format_on_save = true
-
--- Plugins
-lvim.plugins = {
-    -- Copilot
-    "github/copilot.vim",
-
-    -- Themes
-    "flazz/vim-colorschemes",
-    "embark-theme/vim",
-    "sainnhe/everforest",
-    "sainnhe/sonokai",
-    "gekoke/inkstained-vim",
-    "drewtempelmeyer/palenight.vim",
-    "morhetz/gruvbox",
-    "felixhummel/setcolors.vim",
-
-    -- Functionality
-    "tpope/vim-surround",
-
-    -- Language
-    -- C
-    "jackguo380/vim-lsp-cxx-highlight",
-    -- fish
-    "khaveesh/vim-fish-syntax",
-    -- Idris
-    "edwinb/idris2-vim",
-    -- Markdown
-    "iamcco/markdown-preview.nvim",
-    -- Python
-    "petobens/poet-v",
-    -- Xonsh
-    "abhishekmukherg/xonsh-vim",
-}
-
 lvim.builtin.project.manual_mode = true
 lvim.builtin.project.silent_chdir = false
 
@@ -55,29 +13,92 @@ vim.cmd("set relativenumber")
 vim.opt.showtabline = 0
 vim.opt.cmdheight = 1
 lvim.builtin.dashboard.active = true
-lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 
--- Copilot
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
-vim.g.copilot_tab_fallback = ""
-local cmp = require "cmp"
+-- Log
+lvim.log.level = "warn"
 
-lvim.builtin.cmp.mapping["<C-k>"] = function(fallback)
-  if cmp.visible() then
-    cmp.select_next_item()
-  else
-    local copilot_keys = vim.fn["copilot#Accept"]()
-    if copilot_keys ~= "" then
-      vim.api.nvim_feedkeys(copilot_keys, "i", true)
-    else
-      fallback()
-    end
-  end
-end
+-- Format
+lvim.format_on_save = true
 
 -- Themes / Colors
 lvim.transparent_window = false
-lvim.colorscheme = "everforest"
+lvim.colorscheme = "catppuccin"
+
+-- Notifications
+lvim.builtin.notify.active = true
+lvim.builtin.notify.opts = {
+    stages = "fade",
+}
+
+-- Telescope
+lvim.builtin.telescope.setup = {
+    layout_strategy = "vertical"
+}
+
+-- Completion
+table.insert(lvim.builtin.cmp.sources, { name = "nvim_lsp" })
+
+-- User plugins
+lvim.plugins = {
+    -- {
+    --     "zbirenbaum/copilot.lua",
+    --     event = {"InsertEnter"},
+    --     config = function()
+    --         vim.schedule(function()
+    --             require("copilot").setup({
+    --                 plugin_manager_path = vim.fn.expand "$HOME" .. "/.local/share/lunarvim/site/pack/packer",
+    --             })
+    --         end)
+    --     end,
+    -- },
+    -- {
+    --     "zbirenbaum/copilot-cmp",
+    --     after = { "copilot.lua", "nvim-cmp" },
+    --     config = function ()
+    --         lvim.builtin.cmp.formatting.source_names["copilot"] = ""
+    --         table.insert(lvim.builtin.cmp.sources, { name = "copilot" })
+    --     end
+    -- },
+
+    -- Themes
+    "flazz/vim-colorschemes",
+    "bluz71/vim-nightfly-guicolors",
+    "embark-theme/vim",
+    "catppuccin/nvim",
+    "sainnhe/everforest",
+    "sainnhe/sonokai",
+    "gekoke/inkstained-vim",
+    "drewtempelmeyer/palenight.vim",
+    "morhetz/gruvbox",
+
+    -- Functionality
+    "tpope/vim-surround",
+    "MunifTanjim/nui.nvim",
+
+    -- Language
+    -- C
+    "jackguo380/vim-lsp-cxx-highlight",
+    -- fish
+    "khaveesh/vim-fish-syntax",
+    -- Idris
+    {
+        "ShinKage/idris2-nvim",
+        requires = {
+            "idris-community/idris2-lsp",
+            "MunifTanjim/nui.nvim",
+        },
+        config = function()
+            table.insert(lvim.builtin.cmp.sources, { name = "idris2-lsp" })
+            vim.cmd [[nnoremap <LocalLeader>c <Cmd>lua require('idris2.code_action').make_case()<CR>]]
+            require('idris2').setup({})
+        end,
+    },
+    -- Markdown
+    "iamcco/markdown-preview.nvim",
+    -- Python
+    "petobens/poet-v",
+    -- Xonsh
+    "abhishekmukherg/xonsh-vim",
+}
 

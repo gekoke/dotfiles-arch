@@ -2,6 +2,7 @@ function _configure_path
     set -gx PATH $PATH $HOME/.local/bin/
     set -gx PATH $PATH $HOME/.jbang/bin/
     set -gx PATH $PATH $HOME/.emacs.d/bin
+    set -gx PATH $PATH $HOME/.idris2/bin/
 end
 
 function _configure_default_programs
@@ -14,7 +15,7 @@ function _configure_default_programs
     set -U MANPAGER "less -r"
 end
 
-function less_colors
+function _less_colors
     set -Ux LESS_TERMCAP_mb (tput bold; tput setaf 2)
     set -Ux LESS_TERMCAP_md (tput bold; tput setaf 6)
     set -Ux LESS_TERMCAP_me (tput sgr0)
@@ -36,7 +37,13 @@ function _configure_configurations
     set -gx SECURELOCK_NO_COMPOSITE 1
     set -gx GCM_CREDENTIAL_STORE "gpg"
     set -gx NOTES_DIRECTORY "$HOME/.notes"
-    less_colors
+    _less_colors
+end
+
+function _configure_input
+    set -gx GTK_IM_MODULE "ibus"
+    set -gx QT_IM_MODULE "ibus"
+    set -gx XMODIFIERS "@im=ibus"
 end
 
 function _configure_environment

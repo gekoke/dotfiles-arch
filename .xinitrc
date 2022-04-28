@@ -79,6 +79,9 @@ wmname LG3D &
 eval $(gnome-keyring-daemon --start) &
 export SSH_AUTH_SOCK &
 
+# Add unicode character insertion
+/usr/bin/ibus-daemon --xim &
+
 #while type dwm >/dev/null ; do dwm && continue || break ; done
 exec leftwm > ~/.leftwm.log 2>&1
 

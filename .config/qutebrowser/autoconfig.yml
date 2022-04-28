@@ -44,6 +44,7 @@ settings:
     '*://adventofcode.com/*': no-3rdparty
     '*://maurus.ttu.ee/*': no-3rdparty
     '*://monkeytype.com/*': no-3rdparty
+    '*://odysee.com/*': all
     '*://search.brave.com/*': never
     '*://searx.be/*': no-3rdparty
     '*://www.facebook.com/*': no-3rdparty
@@ -62,9 +63,12 @@ settings:
     '*://adventofcode.com/*': true
     '*://app.element.io/*': true
     '*://cumtown.org/*': true
+    '*://elm-lang.org/*': true
+    '*://emacs-lsp.github.io/*': true
     '*://github.com/*': true
     '*://gitlab.com/*': true
     '*://gitlab.cs.ttu.ee/*': true
+    '*://hub.docker.com/*': true
     '*://imgur.com/*': true
     '*://lily.kazv.moe/*': true
     '*://livettu-my.sharepoint.com/*': true
@@ -74,14 +78,20 @@ settings:
     '*://odysee.com/*': true
     '*://old.reddit.com/*': true
     '*://pi.hole/*': true
+    '*://rarbgget.org/*': true
+    '*://search.brave.com/*': true
     '*://searx.be/*': true
+    '*://sonarr.tv/*': true
     '*://tinder.com/*': true
     '*://tube.cadence.moe/*': true
+    '*://wiki.servarr.com/*': true
     '*://www.facebook.com/*': true
     '*://www.fastmail.com/*': true
     '*://www.instagram.com/*': true
+    '*://www.netflix.com/*': true
     '*://www.pornhub.com/*': true
     '*://www.reddit.com/*': true
+    '*://www.shortcutfoo.com/*': true
     '*://www.startpage.com/*': true
     '*://yewtu.be/*': true
     global: true

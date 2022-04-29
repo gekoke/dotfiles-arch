@@ -21,6 +21,7 @@ current = false
 
 [[repos.themes]]
 name = "Soothe"
+directory = "/home/geko/.config/leftwm/themes/Soothe"
 repository = "https://github.com/b4skyx/leftwm-soothe/"
 commit = "*"
 version = "0.0.1"
@@ -78,6 +79,7 @@ current = false
 
 [[repos.themes]]
 name = "Blue Coffee"
+directory = "/home/geko/.config/leftwm/themes/Blue Coffee"
 repository = "https://github.com/Qwart376/Blue-Coffee/"
 commit = "*"
 version = "0.0.1"
@@ -150,6 +152,7 @@ current = false
 
 [[repos.themes]]
 name = "Catppuccin"
+directory = "/home/geko/.config/leftwm/themes/Catppuccin"
 repository = "https://github.com/di-effe/catppuccin"
 commit = "*"
 version = "0.1.1"
@@ -174,10 +177,11 @@ current = false
 
 [[repos.themes]]
 name = "SpaceJelly"
+directory = "/home/geko/.config/leftwm/themes/SpaceJelly"
 repository = "https://gitlab.com/jchand99/space_jelly"
 commit = "*"
 version = "1.0.0"
-leftwm_versions = ">0.2.10, <0.3.0"
+leftwm_versions = ">0.2.7"
 current = false
 
 [[repos.themes]]

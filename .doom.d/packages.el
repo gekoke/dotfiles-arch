@@ -50,4 +50,4 @@
 ;(unpin! t)
 
 ;; Idris2
-(package! idris-mode :recipe (:host github :repo "idris-hackers/idris-mode"))
+(package! idris2-mode :recipe (:host github :repo "idris-community/idris2-mode"))

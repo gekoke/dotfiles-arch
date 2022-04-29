@@ -21,7 +21,7 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
+;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light))
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -79,20 +79,31 @@
 (setq org-directory "~/.org/")
 
 ;; Idris2
-(use-package! idris-mode
-  :mode ("\\.l?idr\\'" . idris-mode)
+(use-package! idris2-mode
+  :mode ("\\.l?idr\\'" . idris2-mode)
   :config
 
+  (setq idris2-semantic-source-highlighting nil)
+
   (after! lsp-mode
-    (add-to-list 'lsp-language-id-configuration '(idris-mode . "idris2"))
+    (add-to-list 'lsp-language-id-configuration '(idris2-mode . "idris2"))
 
     (lsp-register-client
-     (make-lsp-client
-      :new-connection (lsp-stdio-connection "idris2-lsp")
-      :major-modes '(idris-mode)
-      :server-id 'idris2-lsp))
+      (make-lsp-client
+        :new-connection (lsp-stdio-connection "idris2-lsp")
+        :major-modes '(idris2-mode)
+        :server-id 'idris2-lsp))
     )
-    (setq lsp-semantic-tokens-enable t) ;; Optionally enable semantic tokens
+    (setq lsp-semantic-tokens-enable t)
+    (add-hook 'idris2-mode-hook #'lsp!)
+)
 
-  (add-hook 'idris-mode-hook #'lsp!)
-  )
+(after! company
+  (setq company-global-modes
+    '(not erc-mode
+       message-mode
+       help-mode
+       gud-mode
+       vterm-mode
+       idris2-repl-mode))  ;; Fix Idris2 REPL crashing on input
+)

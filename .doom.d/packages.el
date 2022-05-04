@@ -51,3 +51,7 @@
 
 ;; Idris2
 (package! idris2-mode :recipe (:host github :repo "idris-community/idris2-mode"))
+
+;; Matrix client
+(package! plz :recipe (:host github :repo "alphapapa/plz.el"))
+(package! ement :recipe (:host github :repo "alphapapa/ement.el"))
